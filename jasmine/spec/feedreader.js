@@ -94,7 +94,6 @@ $(function() {
 
         it("have at least one entry", function() {
             expect(document.querySelectorAll(".feed .entry").length).not.toBe(0);
-            // done();
         });
     });
 
@@ -119,7 +118,6 @@ $(function() {
          it("has different feed entries", function () {
              newFeed = document.getElementsByClassName("feed")[0].innerHTML;
              expect(newFeed).not.toBe(oldFeed);
-            //  done();
          });
     });
 }());
