@@ -4,16 +4,16 @@
  * all of the tests that will be run against your application.
  */
 
-/* We're placing all of our tests within the $() function,
+/* We"re placing all of our tests within the $() function,
  * since some of these tests may require DOM elements. We want
- * to ensure they don't run until the DOM is ready.
+ * to ensure they don"t run until the DOM is ready.
  */
 $(function() {
     /* This is our first test suite - a test suite just contains
      * a related set of tests. This suite is all about the RSS
      * feeds definitions, the allFeeds variable in our application.
      */
-    describe('RSS Feeds', function() {
+    describe("RSS Feeds", function() {
         /* This is our first test - it tests to make sure that the
          * allFeeds variable has been defined and that it is not
          * empty. Experiment with this before you get started on
@@ -21,7 +21,7 @@ $(function() {
          * allFeeds in app.js to be an empty array and refresh the
          * page?
          */
-        it('are defined', function() {
+        it("are defined", function() {
             expect(allFeeds).toBeDefined();
             expect(allFeeds.length).not.toBe(0);
         });
@@ -55,8 +55,8 @@ $(function() {
     /* Test suite named "The menu" */
     describe("The menu", function() {
         /* Test that ensures the menu element is
-         * hidden by default. You'll have to analyze the HTML and
-         * the CSS to determine how we're performing the
+         * hidden by default. You"ll have to analyze the HTML and
+         * the CSS to determine how we"re performing the
          * hiding/showing of the menu element.
          */
         it("is hidden by default", function() {
@@ -84,7 +84,7 @@ $(function() {
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
          * Remember, loadFeed() is asynchronous so this test will require
-         * the use of Jasmine's beforeEach and asynchronous done() function.
+         * the use of Jasmine"s beforeEach and asynchronous done() function.
          */
         beforeEach(function(done) {
             loadFeed(0, function() {
@@ -92,9 +92,9 @@ $(function() {
             });
         });
 
-        it("have at least one entry", function(done) {
+        it("have at least one entry", function() {
             expect(document.querySelectorAll(".feed .entry").length).not.toBe(0);
-            done();
+            // done();
         });
     });
 
@@ -116,10 +116,10 @@ $(function() {
             });
          });
          
-         it("has different feed entries", function (done) {
+         it("has different feed entries", function () {
              newFeed = document.getElementsByClassName("feed")[0].innerHTML;
              expect(newFeed).not.toBe(oldFeed);
-             done();
+            //  done();
          });
     });
 }());
